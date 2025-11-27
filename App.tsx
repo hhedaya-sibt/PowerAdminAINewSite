@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PainPoints from './components/PainPoints';
+import HowItWorks from './components/HowItWorks';
 import Services from './components/Services';
 import OutboundDiff from './components/OutboundDiff';
 import Process from './components/Process';
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <PainPoints />
+        <HowItWorks />
         <Services />
         <OutboundDiff />
         <Process />

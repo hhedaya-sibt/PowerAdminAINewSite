@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, DollarSign, XCircle } from 'lucide-react';
+import { Clock, DollarSign, UserX, Quote } from 'lucide-react';
 
 const PainPoints: React.FC = () => {
   return (
@@ -8,36 +8,52 @@ const PainPoints: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              The 9 PM Nightmare: <br/>
-              <span className="text-red-600 dark:text-red-400">Where $50k Vanishes.</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+              Every missed call is a customer choosing your competitor.
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              It's 9:05 PM. A prospective client has a major emergency. They call your firm.
-            </p>
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
-              Your answering service picks up. They are polite, but useless. "I'll take a message," they say. 
-              The client hangs up, frustrated.
-            </p>
-            <p className="text-lg text-slate-800 dark:text-slate-100 font-medium mb-8 leading-relaxed border-l-4 border-blue-500 pl-4">
-              They call your competitor. Our AI answers instantly, handles the full intake, books the consultation for 8 AM tomorrow, and syncs the calendar. <span className="text-blue-600 dark:text-blue-400">You just lost the case.</span>
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+              You already know the problem. Calls come in during lunch, after hours, when you're with a client. Your team is busy. Voicemail piles up. By the time someone calls back, the lead has moved on.
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-               <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none">
-                 <div className="flex items-center gap-3 mb-2 text-red-600 dark:text-red-400">
-                   <Clock size={20} />
-                   <span className="font-semibold">Slow Response</span>
+            {/* The Real Cost Stats */}
+            <div className="grid grid-cols-1 gap-4 mb-8">
+               <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
+                 <div className="mt-1 bg-red-100 dark:bg-red-900/30 p-2 rounded-full text-red-600 dark:text-red-400">
+                    <Clock size={20} />
                  </div>
-                 <p className="text-sm text-slate-600 dark:text-slate-400">Average response time of 4+ hours kills lead conversion rates by 80%.</p>
-               </div>
-               <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none">
-                 <div className="flex items-center gap-3 mb-2 text-red-600 dark:text-red-400">
-                   <XCircle size={20} />
-                   <span className="font-semibold">Inconsistency</span>
+                 <div>
+                    <h4 className="font-bold text-slate-900 dark:text-white">78% less likely to connect</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">If you wait more than 10 minutes to respond, your chance of reaching that lead drops by three-quarters.</p>
                  </div>
-                 <p className="text-sm text-slate-600 dark:text-slate-400">Human receptionists have bad days. Scripts get ignored. Details get missed.</p>
                </div>
+
+               <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
+                 <div className="mt-1 bg-orange-100 dark:bg-orange-900/30 p-2 rounded-full text-orange-600 dark:text-orange-400">
+                    <UserX size={20} />
+                 </div>
+                 <div>
+                    <h4 className="font-bold text-slate-900 dark:text-white">62% hang up on voicemail</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">Most callers won't leave a message. They'll try the next name on Google.</p>
+                 </div>
+               </div>
+
+               <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
+                 <div className="mt-1 bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full text-blue-600 dark:text-blue-400">
+                    <DollarSign size={20} />
+                 </div>
+                 <div>
+                    <h4 className="font-bold text-slate-900 dark:text-white">$52,000 per year</h4>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">That's what one receptionist costs. And they can only handle one call at a time.</p>
+                 </div>
+               </div>
+            </div>
+
+            {/* Founder Note */}
+            <div className="relative pl-6 border-l-4 border-blue-500 italic">
+               <Quote className="absolute -top-3 -left-3 text-blue-200 dark:text-slate-700 bg-slate-50 dark:bg-slate-900" size={24} />
+               <p className="text-slate-700 dark:text-slate-300 font-medium">
+                 "I built Piper after watching my law practice lose qualified leads to voicemail every single week. We had the expertise. We just couldn't answer the phone fast enough."
+               </p>
             </div>
           </div>
 

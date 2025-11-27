@@ -3,7 +3,7 @@ import { Mic, Brain, Network, FileText, Check } from 'lucide-react';
 import { TierProps } from '../types';
 
 const TierCard: React.FC<TierProps> = ({ title, priceLevel, description, features, isPopular }) => (
-  <div className={`relative flex flex-col p-8 bg-slate-50 dark:bg-slate-900 border rounded-2xl transition-colors duration-300 ${isPopular ? 'border-blue-500 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-200 dark:border-slate-800'}`}>
+  <div className={`relative flex flex-col p-8 bg-white dark:bg-slate-800/50 border rounded-2xl transition-colors duration-300 ${isPopular ? 'border-blue-500 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-200 dark:border-slate-700'}`}>
     {isPopular && (
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
         Most Common
@@ -26,7 +26,7 @@ const TierCard: React.FC<TierProps> = ({ title, priceLevel, description, feature
 
 const Services: React.FC = () => {
   return (
-    <section id="solutions" className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <section id="solutions" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
@@ -74,7 +74,7 @@ const Services: React.FC = () => {
           />
         </div>
 
-        <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="bg-white dark:bg-slate-800/30 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 transition-colors duration-300">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700/50 text-purple-600 dark:text-purple-400 text-sm font-medium mb-6">
