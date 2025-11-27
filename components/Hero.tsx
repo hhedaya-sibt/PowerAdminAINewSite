@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight">
             Your First AI Employee <br />
-            <span className="gradient-text">Is On The House.</span>
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent pb-2">Is On The House.</span>
           </h1>
           
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
