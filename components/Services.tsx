@@ -3,21 +3,21 @@ import { Mic, Brain, Network, FileText, Check } from 'lucide-react';
 import { TierProps } from '../types';
 
 const TierCard: React.FC<TierProps> = ({ title, priceLevel, description, features, isPopular }) => (
-  <div className={`relative flex flex-col p-8 bg-slate-900 border rounded-2xl ${isPopular ? 'border-blue-500 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-800'}`}>
+  <div className={`relative flex flex-col p-8 bg-slate-50 dark:bg-slate-900 border rounded-2xl transition-colors duration-300 ${isPopular ? 'border-blue-500 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-200 dark:border-slate-800'}`}>
     {isPopular && (
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
         Most Common
       </div>
     )}
-    <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-    <div className="text-blue-400 text-sm font-semibold mb-4">{priceLevel}</div>
-    <p className="text-slate-400 text-sm mb-6 h-12">{description}</p>
+    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
+    <div className="text-blue-600 dark:text-blue-400 text-sm font-semibold mb-4">{priceLevel}</div>
+    <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 h-12">{description}</p>
     
     <div className="space-y-4 flex-grow">
       {features.map((feature, idx) => (
         <div key={idx} className="flex items-start gap-3">
           <Check size={16} className="text-emerald-500 mt-1 flex-shrink-0" />
-          <span className="text-slate-300 text-sm">{feature}</span>
+          <span className="text-slate-600 dark:text-slate-300 text-sm">{feature}</span>
         </div>
       ))}
     </div>
@@ -26,13 +26,13 @@ const TierCard: React.FC<TierProps> = ({ title, priceLevel, description, feature
 
 const Services: React.FC = () => {
   return (
-    <section id="solutions" className="py-24 bg-slate-950">
+    <section id="solutions" className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Boring Systems Beat <br/> Shiny Objects.
           </h2>
-          <p className="text-lg text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             We don't sell "digital transformation." We sell employees that never sleep, never get sick, and follow your playbook perfectly every single time.
           </p>
         </div>
@@ -74,33 +74,33 @@ const Services: React.FC = () => {
           />
         </div>
 
-        <div className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
+        <div className="bg-slate-50 dark:bg-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-800 transition-colors duration-300">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-700/50 text-purple-400 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700/50 text-purple-600 dark:text-purple-400 text-sm font-medium mb-6">
                 <FileText size={14} />
                 <span>Beyond Voice</span>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Complete Workflow Automation</h3>
-              <p className="text-slate-400 mb-6">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Complete Workflow Automation</h3>
+              <p className="text-slate-600 dark:text-slate-400 mb-6">
                 We don't just answer the phone. We ingest documents from email, scanned mail, and web portals. Our AI reads, categorizes, and triggers actions automatically.
               </p>
               <ul className="space-y-3">
-                 <li className="flex items-center gap-2 text-slate-300">
+                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                    <span>Email & Document Ingestion</span>
                  </li>
-                 <li className="flex items-center gap-2 text-slate-300">
+                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                    <span>Automatic Categorization</span>
                  </li>
-                 <li className="flex items-center gap-2 text-slate-300">
+                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
                    <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                    <span>Trigger Downstream Workflows</span>
                  </li>
               </ul>
             </div>
-            <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-sm relative overflow-hidden">
+            <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-sm relative overflow-hidden shadow-xl">
                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-500"></div>
                <div className="space-y-3 opacity-90">
                  <div className="flex gap-3">
