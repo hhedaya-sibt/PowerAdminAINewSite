@@ -15,18 +15,18 @@ const Hero: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Live Deployment: Free Trial
+            AI Voice Agent Platform for Service Businesses
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight">
-            Your First AI Employee <br />
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent pb-2">Is On The House.</span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight">
+            Most businesses lose 62% of leads to voicemail. <br />
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent pb-2">
+              Piper answers in 60 seconds.
+            </span>
           </h1>
           
-          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Stop losing $5k - $50k opportunities because someone hit voicemail at 9 PM. 
-            We deploy AI agents that answer calls, book appointments, and close deals. 
-            <span className="text-slate-900 dark:text-white font-semibold"> Prove it works before you pay a dime.</span>
+          <p className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Your AI receptionist answers calls, qualifies leads, books appointments, and updates your CRM before you finish your meeting. No training required. Works 24/7. Costs less than one part-time employee.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               className="w-full sm:w-auto flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/25"
             >
               <Phone size={20} />
-              Call (813) 737-7025 to Demo
+              See Piper Handle a Real Call
             </a>
             <a 
               href="#contact"
@@ -48,15 +48,15 @@ const Hero: React.FC = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-slate-500 dark:text-slate-500">
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-emerald-500" />
-              <span>No human interaction required</span>
+              <span>Integrated with your CRM</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-emerald-500" />
-              <span>Experience the speed</span>
+              <span>Setup in 48 hours</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-emerald-500" />
-              <span>Real conversation</span>
+              <span>Powered by Send It By Text</span>
             </div>
           </div>
         </div>

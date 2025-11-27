@@ -55,6 +55,7 @@ const Navbar: React.FC = () => {
             <a href="#solutions" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors text-sm font-medium">Solutions</a>
             <a href="#outbound" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors text-sm font-medium">Outbound</a>
             <a href="#process" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors text-sm font-medium">Free Trial</a>
+            <a href="https://app.poweradminai.com" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white transition-colors text-sm font-medium">Login</a>
             
             <button 
               onClick={toggleTheme} 
@@ -96,6 +97,7 @@ const Navbar: React.FC = () => {
             <a href="#solutions" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Solutions</a>
             <a href="#outbound" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Outbound</a>
             <a href="#process" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Free Trial</a>
+            <a href="https://app.poweradminai.com" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick} className="block px-3 py-2 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Login</a>
             <a href="tel:+18137377025" onClick={handleLinkClick} className="block w-full text-center mt-4 bg-blue-600 text-white px-4 py-3 rounded-md font-semibold shadow-lg shadow-blue-500/20">
               Call Demo: (813) 737-7025
             </a>
