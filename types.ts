@@ -1,10 +1,12 @@
 import { LucideIcon } from 'lucide-react';
 
 export interface TierProps {
+  tierName: string;
   title: string;
-  priceLevel: string;
   description: string;
   features: string[];
+  perfectFor: string;
+  value: string;
   isPopular?: boolean;
 }
 

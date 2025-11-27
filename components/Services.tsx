@@ -1,25 +1,42 @@
 import React from 'react';
-import { Mic, Brain, Network, FileText, Check } from 'lucide-react';
+import { Check, Info } from 'lucide-react';
 import { TierProps } from '../types';
 
-const TierCard: React.FC<TierProps> = ({ title, priceLevel, description, features, isPopular }) => (
-  <div className={`relative flex flex-col p-8 bg-white dark:bg-slate-800/50 border rounded-2xl transition-colors duration-300 ${isPopular ? 'border-blue-500 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-200 dark:border-slate-700'}`}>
+const TierCard: React.FC<TierProps> = ({ tierName, title, description, features, perfectFor, value, isPopular }) => (
+  <div className={`flex flex-col h-full p-8 bg-white dark:bg-slate-800/50 border rounded-2xl transition-all duration-300 ${isPopular ? 'border-blue-500 ring-4 ring-blue-500/10 shadow-2xl shadow-blue-900/20 scale-105 z-10' : 'border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700'}`}>
     {isPopular && (
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-        Most Common
+      <div className="self-center mb-4 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+        Most Popular
       </div>
     )}
-    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
-    <div className="text-blue-600 dark:text-blue-400 text-sm font-semibold mb-4">{priceLevel}</div>
-    <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 h-12">{description}</p>
     
-    <div className="space-y-4 flex-grow">
+    <div className="mb-6">
+      <div className="text-blue-600 dark:text-blue-400 font-bold tracking-wider text-sm uppercase mb-1">{tierName}</div>
+      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">{title}</h3>
+      <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{description}</p>
+    </div>
+
+    <div className="mb-8 p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg border border-slate-100 dark:border-slate-700/50">
+      <div className="text-xs text-slate-500 dark:text-slate-500 uppercase font-semibold mb-1">Equivalent Value</div>
+      <div className="text-slate-900 dark:text-white font-bold text-lg">{value}</div>
+    </div>
+    
+    <div className="space-y-4 mb-8 flex-grow">
       {features.map((feature, idx) => (
         <div key={idx} className="flex items-start gap-3">
-          <Check size={16} className="text-emerald-500 mt-1 flex-shrink-0" />
-          <span className="text-slate-600 dark:text-slate-300 text-sm">{feature}</span>
+          <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+             <Check size={12} className="text-blue-600 dark:text-blue-400" />
+          </div>
+          <span className="text-slate-700 dark:text-slate-300 text-sm">{feature}</span>
         </div>
       ))}
+    </div>
+
+    <div className="pt-6 border-t border-slate-100 dark:border-slate-700/50 mt-auto">
+      <div className="flex gap-2 items-start text-xs text-slate-500 dark:text-slate-400">
+        <Info size={14} className="mt-0.5 flex-shrink-0 text-slate-400" />
+        <span><strong className="text-slate-700 dark:text-slate-300">Perfect for:</strong> {perfectFor}</span>
+      </div>
     </div>
   </div>
 );
@@ -30,102 +47,64 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Boring Systems Beat <br/> Shiny Objects.
+            Start simple. Scale as you grow.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            We don't sell "digital transformation." We sell employees that never sleep, never get sick, and follow your playbook perfectly every single time.
+            Each tier includes everything from the previous level. No features held hostage. No surprise fees.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 items-start">
           <TierCard 
-            title="Tier 1: Receptionist"
-            priceLevel="Entry Level"
-            description="Perfect for handling overflow and after-hours coverage without missing a beat."
+            tierName="TIER 1"
+            title="Never Miss a Lead"
+            description="Your 24/7 receptionist that answers, qualifies, and books."
+            value="$52,000/year (cost of one receptionist)"
+            perfectFor="Solo practitioners and small teams who need calls answered but handle their own follow-up processes."
             features={[
-              "24/7 Availability",
-              "Answers calls & takes messages",
-              "Intelligent call routing",
-              "Basic FAQ handling"
+              "Unlimited inbound calls answered",
+              "SMS and email response automation",
+              "Calendar booking across all your systems",
+              "Basic CRM integration (contact creation, notes)",
+              "Call recording and transcripts",
+              "Email and chat support"
             ]}
           />
+          
           <TierCard 
-            title="Tier 2: Specialist"
-            priceLevel="Professional"
-            description="Industry-specific training for complex intake and scheduling tasks."
+            tierName="TIER 2"
+            title="Smart Automation"
+            description="Add custom training for your exact processes."
+            value="$78,000/year (receptionist + intake specialist)"
+            perfectFor="Growing practices with specific intake requirements and established processes they need Piper to follow exactly."
             isPopular={true}
             features={[
               "Everything in Tier 1",
-              "Custom Knowledge Base",
-              "Legal/Medical Intake Scripts",
-              "Calendar Qualification"
+              "Custom AI training on your business knowledge",
+              "Advanced conversation flows for complex scenarios",
+              "Multi-step follow-up sequences",
+              "Custom integrations with your existing tools",
+              "Priority phone support",
+              "Monthly performance reviews"
             ]}
           />
+          
           <TierCard 
-            title="Tier 3: Integrated"
-            priceLevel="Enterprise"
-            description="Deep integration with your tech stack to read/write data in real-time."
+            tierName="TIER 3"
+            title="Full Command"
+            description="Complete CRM integration and workflow automation."
+            value="$156,000/year (two employees + software stack)"
+            perfectFor="Established firms ready to automate their entire front office and scale without adding headcount."
             features={[
-              "Everything in Tier 1 & 2",
-              "CRM API Read/Write",
-              "Real-time Record Updates",
-              "Complex Logic Handling"
+              "Everything in Tiers 1 & 2",
+              "Full CRM read/write access across all fields",
+              "Custom workflow automation (trigger emails, tasks, updates)",
+              "API access for your developers",
+              "Dedicated account manager",
+              "White-glove onboarding with strategy session",
+              "Quarterly business reviews"
             ]}
           />
-        </div>
-
-        <div className="bg-white dark:bg-slate-800/30 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 transition-colors duration-300">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700/50 text-purple-600 dark:text-purple-400 text-sm font-medium mb-6">
-                <FileText size={14} />
-                <span>Beyond Voice</span>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Complete Workflow Automation</h3>
-              <p className="text-slate-600 dark:text-slate-400 mb-6">
-                We don't just answer the phone. We ingest documents from email, scanned mail, and web portals. Our AI reads, categorizes, and triggers actions automatically.
-              </p>
-              <ul className="space-y-3">
-                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                   <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                   <span>Email & Document Ingestion</span>
-                 </li>
-                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                   <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                   <span>Automatic Categorization</span>
-                 </li>
-                 <li className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                   <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                   <span>Trigger Downstream Workflows</span>
-                 </li>
-              </ul>
-            </div>
-            <div className="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-sm relative overflow-hidden shadow-xl">
-               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-blue-500"></div>
-               <div className="space-y-3 opacity-90">
-                 <div className="flex gap-3">
-                   <span className="text-slate-500">09:14:21</span>
-                   <span className="text-blue-400">[INBOUND]</span>
-                   <span className="text-slate-300">PDF received: "Medical_Records.pdf"</span>
-                 </div>
-                 <div className="flex gap-3">
-                   <span className="text-slate-500">09:14:23</span>
-                   <span className="text-purple-400">[AI_READ]</span>
-                   <span className="text-slate-300">Analyzing content... Type identified: Lab Results</span>
-                 </div>
-                 <div className="flex gap-3">
-                   <span className="text-slate-500">09:14:25</span>
-                   <span className="text-emerald-400">[ACTION]</span>
-                   <span className="text-slate-300">Updating CRM Case #49221. Notifying Attorney.</span>
-                 </div>
-                 <div className="flex gap-3">
-                   <span className="text-slate-500">09:14:26</span>
-                   <span className="text-emerald-400">[COMPLETE]</span>
-                   <span className="text-slate-300">Workflow finished successfully.</span>
-                 </div>
-               </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

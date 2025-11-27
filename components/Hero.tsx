@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight">
             Most businesses lose 62% of leads to voicemail. <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent pb-2">
-              Piper answers in 60 seconds.
+              Piper answers in 6 seconds.
             </span>
           </h1>
           

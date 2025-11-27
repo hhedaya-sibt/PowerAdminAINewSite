@@ -41,7 +41,7 @@ const HowItWorks: React.FC = () => {
           <FeatureItem
             icon={MessageSquare}
             title="SMS"
-            description="Text back in 60 seconds, not 6 hours. Piper reads incoming messages, responds with your exact tone, and keeps the conversation moving until they book or buy. Works across all major carriers with built-in deliverability through Send It By Text."
+            description="Text back in 6 seconds, not 6 hours. Piper reads incoming messages, responds with your exact tone, and keeps the conversation moving until they book or buy. Works across all major carriers with built-in deliverability through Send It By Text."
           />
           <FeatureItem
             icon={Mail}
