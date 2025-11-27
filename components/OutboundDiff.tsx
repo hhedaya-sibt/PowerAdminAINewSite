@@ -3,13 +3,13 @@ import { Smartphone, ShieldCheck, PenTool } from 'lucide-react';
 
 const OutboundDiff: React.FC = () => {
   return (
-    <section id="outbound" className="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section id="outbound" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <div className="order-2 lg:order-1">
-            <div className="relative mx-auto w-64 h-[500px] bg-slate-50 dark:bg-slate-900 rounded-[3rem] border-8 border-slate-100 dark:border-slate-800 shadow-2xl p-4 flex flex-col items-center justify-center transition-colors duration-300">
+            <div className="relative mx-auto w-64 h-[500px] bg-white dark:bg-slate-800 rounded-[3rem] border-8 border-white dark:border-slate-800 shadow-2xl p-4 flex flex-col items-center justify-center transition-colors duration-300">
               {/* Screen Content - Keeping dark UI for phone simulation */}
               <div className="w-full h-full bg-slate-950 rounded-[2rem] overflow-hidden flex flex-col relative">
                 
@@ -73,7 +73,7 @@ const OutboundDiff: React.FC = () => {
               We fix this. Your name displays on the phone. Trust is established before they say hello.
             </p>
 
-            <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-6 border border-slate-100 dark:border-slate-800 mb-8 shadow-sm transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 mb-8 shadow-sm transition-colors duration-300">
               <h4 className="text-slate-900 dark:text-white font-bold mb-4 flex items-center gap-2">
                 <PenTool size={18} className="text-blue-600 dark:text-blue-400" />
                 Live Document Signing

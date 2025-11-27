@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import PainPoints from './components/PainPoints';
 import HowItWorks from './components/HowItWorks';
 import Services from './components/Services';
+import Differentiators from './components/Differentiators';
 import OutboundDiff from './components/OutboundDiff';
 import Process from './components/Process';
 import Contact from './components/Contact';
@@ -18,6 +19,7 @@ const App: React.FC = () => {
         <PainPoints />
         <HowItWorks />
         <Services />
+        <Differentiators />
         <OutboundDiff />
         <Process />
         <Contact />

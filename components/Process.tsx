@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Process: React.FC = () => {
   return (
-    <section id="process" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section id="process" className="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
@@ -23,8 +23,8 @@ const Process: React.FC = () => {
              { title: "Configuration", desc: "We build your custom AI agent and knowledge base. Done for you.", step: "02" },
              { title: "Live Fire Test", desc: "4-5 days running on live traffic. Watch the results in real-time.", step: "03" }
            ].map((item, idx) => (
-             <div key={idx} className="relative z-10 bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors duration-300">
-                <div className="text-5xl font-bold text-slate-100 dark:text-slate-700/50 mb-6 absolute top-4 right-6 select-none">{item.step}</div>
+             <div key={idx} className="relative z-10 bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors duration-300">
+                <div className="text-5xl font-bold text-slate-200 dark:text-slate-800 mb-6 absolute top-4 right-6 select-none">{item.step}</div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 relative">{item.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400 relative">{item.desc}</p>
              </div>

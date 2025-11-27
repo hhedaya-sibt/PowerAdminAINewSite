@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section id="contact" className="py-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
             <p className="text-slate-600 dark:text-slate-400 mb-8">
               We prefer you call the demo number to experience the tech, but if you want to discuss a specific enterprise use case, let's talk.
             </p>
-            <div className="bg-slate-50 dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none">
               <h4 className="text-slate-900 dark:text-white font-bold mb-2">Ideal For:</h4>
               <ul className="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
                 <li>• Personal Injury Law Firms</li>
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden transition-colors duration-300">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden transition-colors duration-300">
              {isSubmitted ? (
                <div className="p-12 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
                   <div className="w-16 h-16 bg-emerald-500/20 text-emerald-600 dark:text-emerald-500 rounded-full flex items-center justify-center mb-6">
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                        name="name"
                        value={formData.name}
                        onChange={handleChange}
-                       className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
+                       className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
                        placeholder="John Doe"
                        required
                      />
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                          name="email"
                          value={formData.email}
                          onChange={handleChange}
-                         className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
+                         className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
                          placeholder="john@company.com"
                          required
                        />
@@ -102,7 +102,7 @@ const Contact: React.FC = () => {
                          name="phone"
                          value={formData.phone}
                          onChange={handleChange}
-                         className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
+                         className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
                          placeholder="(555) 000-0000"
                        />
                      </div>
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
                        name="painPoint"
                        value={formData.painPoint}
                        onChange={handleChange}
-                       className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
+                       className="w-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors"
                      >
                        <option>Missed After-Hours Calls</option>
                        <option>Outbound Lead Reactivation</option>
