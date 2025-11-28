@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react';
+
+// INSTRUCTIONS:
+// 1. Go to https://formspree.io/ and create a free account.
+// 2. Create a new form and copy the endpoint URL they give you.
+// 3. Paste it inside the quotes below. e.g. "https://formspree.io/f/xyza..."
+const FORM_ENDPOINT = "https://formspree.io/f/xrbwljwo"; 
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,12 +14,50 @@ const Contact: React.FC = () => {
     phone: '',
     painPoint: 'Missed Calls'
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the data to a backend here.
-    setIsSubmitted(true);
+    setStatus('submitting');
+    setErrorMessage('');
+
+    // If no endpoint is set, simulate a success after 1 second (for demo purposes)
+    if (!FORM_ENDPOINT) {
+      console.warn("No FORM_ENDPOINT set in Contact.tsx. Simulating success.");
+      setTimeout(() => {
+        setStatus('success');
+      }, 1000);
+      return;
+    }
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', phone: '', painPoint: 'Missed Calls' });
+      } else {
+        const data = await response.json();
+        if (Object.prototype.hasOwnProperty.call(data, 'errors')) {
+          setErrorMessage(data["errors"].map((error: any) => error["message"]).join(", "));
+        } else {
+          setErrorMessage('Something went wrong. Please try again.');
+        }
+        setStatus('error');
+      }
+    } catch (error) {
+      setErrorMessage('Network error. Please try again later.');
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -44,7 +88,7 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden transition-colors duration-300">
-             {isSubmitted ? (
+             {status === 'success' ? (
                <div className="p-12 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
                   <div className="w-16 h-16 bg-emerald-500/20 text-emerald-600 dark:text-emerald-500 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle size={32} />
@@ -55,7 +99,7 @@ const Contact: React.FC = () => {
                   </p>
                   <button 
                     onClick={() => {
-                      setIsSubmitted(false);
+                      setStatus('idle');
                       setFormData({ name: '', email: '', phone: '', painPoint: 'Missed Calls' });
                     }}
                     className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium transition-colors"
@@ -65,6 +109,13 @@ const Contact: React.FC = () => {
                </div>
              ) : (
               <form onSubmit={handleSubmit} className="p-8">
+                 {status === 'error' && (
+                   <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-3">
+                     <AlertCircle className="text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" size={18} />
+                     <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+                   </div>
+                 )}
+
                  <div className="space-y-6">
                    <div>
                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-400 mb-2">Full Name</label>
@@ -126,9 +177,19 @@ const Contact: React.FC = () => {
 
                    <button 
                      type="submit" 
-                     className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg shadow-blue-500/20"
+                     disabled={status === 'submitting'}
+                     className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg font-bold transition-all shadow-lg shadow-blue-500/20 disabled:opacity-70 disabled:cursor-not-allowed"
                    >
-                     Request Consultation <Send size={18} />
+                     {status === 'submitting' ? (
+                       <>
+                         <Loader2 size={18} className="animate-spin" />
+                         Sending...
+                       </>
+                     ) : (
+                       <>
+                         Request Consultation <Send size={18} />
+                       </>
+                     )}
                    </button>
                  </div>
               </form>
