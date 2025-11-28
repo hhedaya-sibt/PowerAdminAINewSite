@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Sun, Moon } from 'lucide-react';
 
-// To add your logo: Upload your file (e.g., logo.png) to the public folder
-// and set this variable to the file path, e.g., "/logo.png"
-const LOGO_URL = "https://storage.googleapis.com/msgsndr/hwdKuq76jEKM0LWlIx8A/media/68e9019f55c3ad41fd2868b5.png"; 
+// Light mode logo (Color)
+const LOGO_LIGHT = "https://storage.googleapis.com/msgsndr/hwdKuq76jEKM0LWlIx8A/media/68e9019f55c3ad41fd2868b5.png";
+// Dark mode logo (White)
+const LOGO_DARK = "https://storage.googleapis.com/msgsndr/hwdKuq76jEKM0LWlIx8A/media/684710e947cd63dc41b5374b.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,13 +49,11 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <a href="#" onClick={handleLogoClick} className="flex-shrink-0 flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity">
-            {LOGO_URL ? (
-              <img src={LOGO_URL} alt="PowerAdminAI" className="h-10 w-auto" />
-            ) : (
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P</span>
-              </div>
-            )}
+            {/* Light Mode Logo (Color) - Hidden in Dark Mode */}
+            <img src={LOGO_LIGHT} alt="PowerAdminAI" className="h-10 w-auto block dark:hidden" />
+            
+            {/* Dark Mode Logo (White) - Hidden in Light Mode */}
+            <img src={LOGO_DARK} alt="PowerAdminAI" className="h-10 w-auto hidden dark:block" />
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
