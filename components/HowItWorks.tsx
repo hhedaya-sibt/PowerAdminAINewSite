@@ -25,7 +25,7 @@ const HowItWorks: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Your AI employee that works while you sleep
+            How Our <span className="text-blue-600 dark:text-blue-400">24/7 AI Receptionist</span> Works
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             Piper is a voice agent platform that handles the first conversation with every prospect. It doesn't just answer the phone. It qualifies, books, follows up, and hands you a warm lead ready to close.
@@ -35,22 +35,22 @@ const HowItWorks: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureItem
             icon={PhoneCall}
-            title="Voice Calls"
-            description="Your callers won't know they're talking to AI. Piper handles objections, answers questions, and books appointments like your best employee, every single time. No scripts that sound robotic. No &quot;press 1 for sales.&quot; Just natural conversation that converts."
+            title="Voice Calls & Phone Answering"
+            description="Your callers won't know they're talking to an AI phone answering service. Piper handles objections, answers questions, and books appointments like your best employee, every single time. No scripts that sound robotic. No &quot;press 1 for sales.&quot; Just natural conversation that converts."
           />
           <FeatureItem
             icon={MessageSquare}
-            title="SMS"
+            title="SMS & Text Response"
             description="Text back in 6 seconds, not 6 hours. Piper reads incoming messages, responds with your exact tone, and keeps the conversation moving until they book or buy. Works across all major carriers with built-in deliverability through Send It By Text."
           />
           <FeatureItem
             icon={Mail}
-            title="Email"
+            title="Email Automation"
             description="Stop letting qualified leads sit in your inbox for days. Piper reads, categorizes, and responds to inquiries using your knowledge base. Sends follow-ups on your schedule. Manages campaigns without you touching the keyboard."
           />
           <FeatureItem
             icon={CalendarCheck}
-            title="Calendar"
+            title="Automated Appointment Booking"
             description="No more back-and-forth about availability. Piper checks your calendar in real time, offers open slots, books the appointment, and sends confirmation with reminders. Syncs with Google Calendar, Outlook, and Calendly."
           />
           <FeatureItem
@@ -60,7 +60,7 @@ const HowItWorks: React.FC = () => {
           />
           <FeatureItem
             icon={BarChart3}
-            title="Analytics"
+            title="Analytics & Reporting"
             description="See exactly what's working. Call duration, conversion rates, common objections, peak call times. Track which marketing channels send the best leads. Make decisions based on data, not guesses."
           />
         </div>

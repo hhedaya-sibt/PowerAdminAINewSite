@@ -9,6 +9,7 @@ import OutboundDiff from './components/OutboundDiff';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FAQ from './components/FAQ';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Differentiators />
         <OutboundDiff />
         <Process />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

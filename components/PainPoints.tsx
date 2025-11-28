@@ -9,7 +9,7 @@ const PainPoints: React.FC = () => {
           
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-              Every missed call is a customer choosing your competitor.
+              Every missed call is a customer choosing your competitor. <span className="text-blue-600 dark:text-blue-400">AI Phone Answering Service</span> solves this.
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
               You already know the problem. Calls come in during lunch, after hours, when you're with a client. Your team is busy. Voicemail piles up. By the time someone calls back, the lead has moved on.
@@ -19,7 +19,7 @@ const PainPoints: React.FC = () => {
             <div className="grid grid-cols-1 gap-4 mb-8">
                <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
                  <div className="mt-1 bg-red-100 dark:bg-red-900/30 p-2 rounded-full text-red-600 dark:text-red-400">
-                    <Clock size={20} />
+                    <Clock size={20} aria-label="Time clock icon" />
                  </div>
                  <div>
                     <h4 className="font-bold text-slate-900 dark:text-white">78% less likely to connect</h4>
@@ -29,7 +29,7 @@ const PainPoints: React.FC = () => {
 
                <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
                  <div className="mt-1 bg-orange-100 dark:bg-orange-900/30 p-2 rounded-full text-orange-600 dark:text-orange-400">
-                    <UserX size={20} />
+                    <UserX size={20} aria-label="Missed user icon" />
                  </div>
                  <div>
                     <h4 className="font-bold text-slate-900 dark:text-white">62% hang up on voicemail</h4>
@@ -39,7 +39,7 @@ const PainPoints: React.FC = () => {
 
                <div className="bg-white dark:bg-slate-800/50 p-4 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm flex items-start gap-4">
                  <div className="mt-1 bg-blue-100 dark:bg-blue-900/30 p-2 rounded-full text-blue-600 dark:text-blue-400">
-                    <DollarSign size={20} />
+                    <DollarSign size={20} aria-label="Dollar sign icon" />
                  </div>
                  <div>
                     <h4 className="font-bold text-slate-900 dark:text-white">$52,000 per year</h4>
@@ -50,9 +50,9 @@ const PainPoints: React.FC = () => {
 
             {/* Founder Note */}
             <div className="relative pl-6 border-l-4 border-blue-500 italic">
-               <Quote className="absolute -top-3 -left-3 text-blue-200 dark:text-slate-700 bg-slate-50 dark:bg-slate-900" size={24} />
+               <Quote className="absolute -top-3 -left-3 text-blue-200 dark:text-slate-700 bg-slate-50 dark:bg-slate-900" size={24} aria-hidden="true" />
                <p className="text-slate-700 dark:text-slate-300 font-medium">
-                 "I built Piper after watching my law practice lose qualified leads to voicemail every single week. We had the expertise. We just couldn't answer the phone fast enough."
+                 "We built Piper after watching a client's law practice lose qualified leads to voicemail every single week. We had the expertise. They just couldn't answer the phone everytime it rang."
                </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const PainPoints: React.FC = () => {
              <div className="relative bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-2xl">
                 <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4 mb-6">
                   <span className="text-slate-500 dark:text-slate-400 text-sm">Missed Opportunity Calculation</span>
-                  <DollarSign className="text-red-500" size={20}/>
+                  <DollarSign className="text-red-500" size={20} aria-hidden="true" />
                 </div>
                 <div className="space-y-6">
                   <div className="flex justify-between items-center">

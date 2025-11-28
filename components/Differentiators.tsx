@@ -22,7 +22,7 @@ const Differentiators: React.FC = () => {
             <span>Why Us</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Built for operators, not enterprise IT departments.
+            <span className="text-blue-600 dark:text-blue-400">AI Voice Agent Software</span> Built for Operators, Not IT Departments.
           </h2>
         </div>
 

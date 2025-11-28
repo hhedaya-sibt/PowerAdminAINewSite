@@ -7,7 +7,7 @@ const Process: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            We Deploy First. <br/> You Pay Later.
+            We Deploy Your <span className="text-blue-600 dark:text-blue-400">Virtual Receptionist</span> First. <br/> You Pay Later.
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
             Most competitors want a $5,000 setup fee just to start. We are confident enough to build it, deploy it, and let you break it for 5 days.

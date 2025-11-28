@@ -63,8 +63,7 @@ const OutboundDiff: React.FC = () => {
 
           <div className="order-1 lg:order-2">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
-              The Only Way Outbound Works: <br/>
-              <span className="text-blue-600 dark:text-blue-400">Branded Caller ID.</span>
+              The Only Way <span className="text-blue-600 dark:text-blue-400">AI Voice Agent Software</span> Works for Outbound.
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
               Most AI outbound campaigns fail because they show up as "Unknown" or "Spam Likely." Nobody answers those.

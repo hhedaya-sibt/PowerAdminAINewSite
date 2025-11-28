@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <a href="#" onClick={scrollToTop} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             {/* Light Mode Logo (Black) - Hidden in Dark Mode */}
-            <img src={LOGO_LIGHT} alt="PowerAdminAI" className="h-8 w-auto block dark:hidden" />
+            <img src={LOGO_LIGHT} alt="PowerAdminAI - AI Receptionist for Small Business" className="h-8 w-auto block dark:hidden" />
             
             {/* Dark Mode Logo (White) - Hidden in Light Mode */}
-            <img src={LOGO_DARK} alt="PowerAdminAI" className="h-8 w-auto hidden dark:block" />
+            <img src={LOGO_DARK} alt="PowerAdminAI - AI Receptionist for Small Business" className="h-8 w-auto hidden dark:block" />
         </a>
         <div className="text-slate-500 dark:text-slate-500 text-sm flex flex-col items-center md:items-start gap-1">
           <p>© {new Date().getFullYear()} PowerAdminAI. Systems over tactics.</p>

@@ -50,10 +50,10 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           <a href="#" onClick={handleLogoClick} className="flex-shrink-0 flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity">
             {/* Light Mode Logo (Color) - Hidden in Dark Mode */}
-            <img src={LOGO_LIGHT} alt="PowerAdminAI" className="h-10 w-auto block dark:hidden" />
+            <img src={LOGO_LIGHT} alt="PowerAdminAI - AI Receptionist for Small Business" className="h-10 w-auto block dark:hidden" />
             
             {/* Dark Mode Logo (White) - Hidden in Light Mode */}
-            <img src={LOGO_DARK} alt="PowerAdminAI" className="h-10 w-auto hidden dark:block" />
+            <img src={LOGO_DARK} alt="PowerAdminAI - AI Receptionist for Small Business" className="h-10 w-auto hidden dark:block" />
           </a>
           
           <div className="hidden md:flex items-center space-x-8">

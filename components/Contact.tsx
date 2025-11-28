@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
           
           <div>
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-              Still have questions?
+              Still have questions about our <span className="text-blue-600 dark:text-blue-400">AI Receptionist</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mb-8">
               We prefer you call the demo number to experience the tech, but if you want to discuss a specific enterprise use case, let's talk.

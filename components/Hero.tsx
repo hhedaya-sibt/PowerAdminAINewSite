@@ -19,14 +19,11 @@ const Hero: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-tight">
-            Most businesses lose 62% of leads to voicemail. <br />
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-300 bg-clip-text text-transparent pb-2">
-              Piper answers in 6 seconds.
-            </span>
+            The <span className="font-extrabold text-slate-900 dark:text-white">AI Receptionist for Small Business</span> That Answers in 6 Seconds.
           </h1>
           
           <p className="mt-6 text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Your AI receptionist answers calls, qualifies leads, books appointments, and updates your CRM before you finish your meeting. No training required. Works 24/7. Costs less than one part-time employee.
+            Your <strong>virtual receptionist</strong> and <strong>AI voice agent software</strong> answers calls, qualifies leads, books appointments, and updates your CRM before you finish your meeting. No training required. Works 24/7. Costs less than one part-time employee.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -39,7 +36,7 @@ const Hero: React.FC = () => {
             </a>
             <a 
               href="#contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-lg text-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 transition-all bg-slate-50 dark:bg-slate-900/50"
+              className="w-full sm:w-auto px-8 py-4 rounded-lg text-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white border border border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500 transition-all bg-slate-50 dark:bg-slate-900/50"
             >
               Or Book Consultation
             </a>
