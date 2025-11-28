@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Sun, Moon } from 'lucide-react';
 
+// To add your logo: Upload your file (e.g., logo.png) to the public folder
+// and set this variable to the file path, e.g., "/logo.png"
+const LOGO_URL = ""; 
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -44,9 +48,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <a href="#" onClick={handleLogoClick} className="flex-shrink-0 flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">P</span>
-            </div>
+            {LOGO_URL ? (
+              <img src={LOGO_URL} alt="PowerAdminAI" className="h-8 w-auto" />
+            ) : (
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold">P</span>
+              </div>
+            )}
             <span className="font-bold text-xl text-slate-900 dark:text-white tracking-tight">PowerAdminAI</span>
           </a>
           
