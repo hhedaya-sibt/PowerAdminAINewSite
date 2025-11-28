@@ -20,8 +20,6 @@ const Footer: React.FC = () => {
             
             {/* Dark Mode Logo (White) - Hidden in Light Mode */}
             <img src={LOGO_DARK} alt="PowerAdminAI" className="h-8 w-auto hidden dark:block" />
-
-            <span className="font-bold text-lg text-slate-700 dark:text-slate-300">PowerAdminAI</span>
         </a>
         <div className="text-slate-500 dark:text-slate-500 text-sm flex flex-col items-center md:items-start gap-1">
           <p>© {new Date().getFullYear()} PowerAdminAI. Systems over tactics.</p>
